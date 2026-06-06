@@ -87,5 +87,5 @@ This repository contains my daily progress, code examples, assignments, and proj
 
 ## Author
 
-Yuvraj
+kajal 
 
