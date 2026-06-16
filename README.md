@@ -26,31 +26,56 @@ This repository contains my daily progress, code examples, assignments, and proj
 
 ### Day 01
 
-* Introduction to HTML
-* Basic HTML Structure
+* creating server
 
 ### Day 02
 
-* Forms and Input Elements
+* express routers
+* creating and organizing routes
 
 ### Day 03
 
-* CSS Fundamentals
+* controllers in express
+* 
 
 ### Day 04
 
-* Flexbox and Layouts
+* user registration in express
 
+### Day 05
+
+* connecting backend with database
+
+### Day 06
+
+* securing our private data with .env
+
+### Day 07
+
+* creating user schema & model for user registration in mern app
+
+### Day 08
+
+* Store user registration database
+
+### Day 09
+
+* securing user password with BCRYPT
+
+### Day 10
+
+* secure user auuthentication with JWT
+
+### Day 11
+
+* complete backend login functionality
+
+### Day 12
+
+* adding form validation using zod
+  
 *(This section will be updated as I progress.)*
 
-## Repository Structure
-
-```text
-Day-01/
-Day-02/
-Day-03/
-...
-```
 
 ## Goals
 
@@ -62,5 +87,5 @@ Day-03/
 
 ## Author
 
-Yuvraj
+kajal 
 
