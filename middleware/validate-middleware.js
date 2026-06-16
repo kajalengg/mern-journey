@@ -4,14 +4,19 @@ try {
     req.body = parsedBody;
     next();
 } catch (er) {
-    console.log(er);
+    const status = 422;
+    const message = "Failed to validate";
+    const extraDetail = er.issues && er.issues[0] ? er.issues[0].message : er.message;
+    const error = {
+        status,
+        message,
+        extraDetail,
+    };
 
-    const message =
-    er.issues?.[0]?.message ||
-    er.message ||
-    "Validation failed";
+    console.log(error);
 
-    return res.status(400).json({ msg: message });
+    next(error);
+    
 }
 };
 

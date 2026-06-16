@@ -33,8 +33,9 @@ const lo = async (req, res) => {
     }
     
   } catch (error) {
-    console.log(error);
-    res.status(500).send({ message: "Server error login" });
+    //console.log(error);
+    //res.status(500).send({ message: "Server error login" });
+    next(error);
   }
 };
 
@@ -58,8 +59,9 @@ const re = async (req, res) => {
       id: usercreated._id.toString() });
   }
   catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server error" });
+    //console.error(error);
+    //res.status(500).json({ message: "Server error" });
+    next(error);
   }
 
 
