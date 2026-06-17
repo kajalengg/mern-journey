@@ -26,22 +26,37 @@ I continuously improve my skills by implementing real-world features, solving pr
 
 ## 🛠️ Tech Stack
 
-Frontend
-⚛️ React.js
-⚡ Vite
-🎨 CSS3
-🔀 React Router DOM
-Backend
-🟢 Node.js
-🚂 Express.js
-🍃 MongoDB
-🔐 JWT Authentication
-✅ Zod Validation
-Tools
-🐙 Git & GitHub
-📮 Postman
-💻 VS Code
+## Frontend
 
+⚛️ React.js
+
+⚡ Vite
+
+🎨 CSS3
+
+🔀 React Router DOM
+
+
+## Backend
+
+*🟢 Node.js
+
+*🚂 Express.js
+
+*🍃 MongoDB
+
+*🔐 JWT Authentication
+
+*✅ Zod Validation
+
+
+## Tools
+
+*🐙 Git & GitHub
+
+*📮 Postman
+
+*💻 VS Code
 
 
 
@@ -63,13 +78,19 @@ Tools
 
 ## ✨ Features Implemented
 
-🔐 User Authentication
-📝 Registration & Login APIs
-✅ Input Validation using Zod
-🔑 JWT-based Authentication
-📬 Contact API
-⚠️ Error Handling Middleware
-🌐 RESTful APIs
+*🔐 User Authentication
+
+*📝 Registration & Login APIs
+
+*✅ Input Validation using Zod
+
+*🔑 JWT-based Authentication
+
+*📬 Contact API
+
+*⚠️ Error Handling Middleware
+
+*🌐 RESTful APIs
 
 
 
