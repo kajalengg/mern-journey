@@ -1,13 +1,49 @@
 # mern-journey
 A structured record of my web development journey, featuring day-wise notes, practice exercises, and projects as I learn modern web technologies.
 
+Building real-world applications using MongoDB, Express.js, React.js, and Node.js while documenting my learning progress.
+
+
+
+
 # Web Development Journey 🚀
 
 A structured record of my web development journey, featuring day-wise notes, practice exercises, and projects as I learn modern web technologies.
 
+
+
 ## About
 
 This repository contains my daily progress, code examples, assignments, and projects while learning web development. The goal is to build a strong foundation in both frontend and backend technologies through consistent practice.
+
+This repository documents my journey of learning and building full-stack applications using the MERN Stack.
+
+I continuously improve my skills by implementing real-world features, solving problems, and following best development practices.
+
+
+
+.
+
+## 🛠️ Tech Stack
+
+Frontend
+⚛️ React.js
+⚡ Vite
+🎨 CSS3
+🔀 React Router DOM
+Backend
+🟢 Node.js
+🚂 Express.js
+🍃 MongoDB
+🔐 JWT Authentication
+✅ Zod Validation
+Tools
+🐙 Git & GitHub
+📮 Postman
+💻 VS Code
+
+
+
 
 ## Topics Covered
 
@@ -21,6 +57,21 @@ This repository contains my daily progress, code examples, assignments, and proj
 * MongoDB
 * REST APIs
 * Full-Stack Development
+
+
+
+
+## ✨ Features Implemented
+
+🔐 User Authentication
+📝 Registration & Login APIs
+✅ Input Validation using Zod
+🔑 JWT-based Authentication
+📬 Contact API
+⚠️ Error Handling Middleware
+🌐 RESTful APIs
+
+
 
 ## Progress
 
@@ -77,15 +128,52 @@ This repository contains my daily progress, code examples, assignments, and proj
 *(This section will be updated as I progress.)*
 
 
-## Goals
+## 🎯Goals
 
 * Practice coding daily
+
 * Build real-world projects
+
 * Learn modern web development technologies
+
 * Track progress consistently
+
 * Create a strong development portfolio
+
+* Role-based Authentication
+
+* Admin Dashboard
+
+* Deployment
+
+* State Management
+
+* File Uploads
+
+* Testing
+
+
+
+## 🤝 Connect With Me
+
+Email: www.kajal547yadav@gmail.com
+
+GitHub: https://github.com/kajalengg
+
+Linkedin: https://www.linkedin.com/in/kajal-yadav-4314b9362
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=kajalengg&show_icons=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kajalengg&layout=compact)
+
+
 
 ## Author
 
 kajal 
 
+
+
+## ⭐ If you like this project, give it a star!
+
+Happy Coding 🚀
