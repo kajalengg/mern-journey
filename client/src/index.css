@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist, system-ui, Avenir,Arial, Helvetica, sans-serif,;
+    color-scheme: light dark;
+}
+:root {
+    --background-color: #f4f3ff;
+    --btn-color: #646cff;
+    --dark-color: #242424;
+    --helper-color: #99b9ff;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*base style*/
+
+body {
+    margin: 0;
+   /* min-width: 32rem;*/
+    min-height: 100vh;
+}
+
+h1 {
+
+    font-size: 5.4rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+    font-size: 1.8rem;
+    line-height: 1.56;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.06rem;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--btn-color);
+    text-decoration: inherit;
+
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 5rem 2.4rem;
+}
+
+.grid {
+    display: grid;
+    gap: 6.4rem;
+}
+
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+    text-transform: capitalize;
+    padding: 1rem 2.2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    color: #fff;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    border: 0.1rem solid transparent;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+}
+
+.btn-2{
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+    margin-left: 3.2rem;
+}
+/*state rules*/
+button:hover {
+    box-shadow: inset 0 0 0 0.2rem var(--background-color);
+
+}
+
+a:hover {
+    a.active {
+            color: #535bf2;
+    }
+    button {
+
+        background-color: #f9f9f9;
+
+    }
+    
+    
+}
+
+
+.section-hero {
+    &.grid{
+        align-items: center;
+    }
+
+    .hero-content {
+        & p{
+            margin: 2.4rem 0 5.8rem 0;
+            &:first-child {
+                margin: 0 0 1.2rem 0;
+            }
+        }
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        & img {
+            max-width: 75%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.another-section {
+
+    margin: 8.6rem 0;
+
+    & .container {
+        background-color: var(--background-color);
+        border-radius: 1rem;
+    }
+
+    & .grid{
+        color: var(--dark-color);
+
+        & .div1{
+            text-align: center;
+            border-right: 0.2rem solid var(--dark-color);
+            margin-right: 3.4rem;
+
+
+            &:last-child {
+                border-right: none;
+                text-align: center;
+            }
+
+            & h2 {
+                font-size:4.8rem;
+                
+            }
+
+            & p {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.parentcontainerc {
+
+    padding: 0%;
+
+    & h1 {
+        margin-bottom: 3.2rem;
+    }
+
+}
+
+.container {
+    padding-top: 3.2rem;
+
+}
+
+& .contact-image {
+
+    align-items: center;
+    
+    & img {
+
+        width: 65%;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+    }
+    
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+}
+& label {
+
+    display: block;
+    margin-bottom: 1.2rem;
+
+
+}
+
+& input,
+textarea {
+
+        width: 80;
+        padding: 0.2rem 0.6rem;
+
+}
+#error-page .content {
+    max-width: 70rem;
+    text-align: center;
+}
+.content h2.header {
+    font-size: 18vw;
+    line-height: 1rem;
+    animation: animate 10s ease-in-out infinite;
+    background: -webkit-repeating-linear-gradient(
+        #71b7e6,
+        var(--btn-color),
+        #d188ee,
+        #338eac,
+        #a53978,
+        var(--btn-color),
+        #8f31b5
+    );
+    background-size: 500%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(238, 104, 104, 0.5);
+    position: relative;
+
+}
+
+@keyframes animate {
+
+    0%{
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+/* Mobile Responsive - 320px to 768px - Same layout as desktop */
+@media (max-width: 768px) {
+    html {
+        font-size: 48%;
+    }
+
+    h1 {
+        font-size: 4.4rem;
+        line-height: 1.1;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    textarea {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+    /* Keep same layout - grid-two-column stays 2 columns */
+    .grid-two-column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-2 {
+        margin-left: 2.4rem;
+    }
+
+    .section-hero {
+        &.grid {
+            align-items: center;
+        }
+
+        .hero-content {
+            & p {
+                margin: 2.4rem 0 5.8rem 0;
+                &:first-child {
+                    margin: 0 0 1.2rem 0;
+                }
+            }
+        }
+
+        .hero-image {
+            & img {
+                max-width: 85%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .another-section {
+        margin: 8.6rem 0;
+
+        & .grid {
+            grid-template-columns: repeat(2, 1fr);
+            color: var(--dark-color);
+            gap: 4rem;
+
+            & .div1 {
+                text-align: center;
+                border-right: 0.2rem solid var(--dark-color);
+                margin-right: 2rem;
+
+                &:last-child {
+                    border-right: none;
+                    text-align: center;
+                }
+
+                & h2 {
+                    font-size: 3.8rem;
+                }
+
+                & p {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .parentcontainerc {
+        padding: 0%;
+
+        & h1 {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    & .contact-image {
+        align-items: center;
+
+        & img {
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+            max-width: 100%;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    & label {
+        display: block;
+        margin-bottom: 1.2rem;
+    }
+
+    & input,
+    textarea {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    #error-page .content {
+        max-width: 70rem;
+        text-align: center;
+    }
+
+    .content h2.header {
+        font-size: 12vw;
+        line-height: 1rem;
+    }
+}
+
+/* Small Mobile - 320px to 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 42%;
+    }
+
+    .container {
+        padding: 2.5rem 1rem;
+    }
+
+    button {
+        padding: 0.7rem 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .btn-2 {
+        margin-left: 1.8rem;
+    }
+
+    .section-hero {
+        .hero-image {
+            & img {
+                max-width: 95%;
+                height: auto;
+            }
+        }
+    }
+
+    & .contact-image {
+        & img {
+            width: 85%;
+            height: auto;
+        }
+    }
+
+    .another-section {
+        & .grid {
+            gap: 2.5rem;
+
+            & .div1 {
+                margin-right: 1rem;
+
+                & h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+
+
