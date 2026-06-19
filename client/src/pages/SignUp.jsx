@@ -42,27 +42,26 @@ const handleSubmit = async (e) => {
       }
     );
 
-    const res_data = await response.json();
-    console.log("res from server", res_data);
-   
-    console.log(response.status);
+    
 
     if (response.ok) {
-  console.log("Before navigate");
 
-  storetokenInLS(res_data.token);
+      const res_data = await response.json();
+      console.log("res from server", res_data);
+      console.log("Before navigate");
+      storetokenInLS(res_data.token);
+      setUser({
+        name: "",
+        email: "",
+        phone: "",
+        password: "",
+      });
 
-  setUser({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-  });
+      navigate("/login");
 
-  navigate("/login");
+      console.log("After navigate");
+    }
 
-  console.log("After navigate");
-}
   } catch (error) {
     console.log("signup", error);
   }

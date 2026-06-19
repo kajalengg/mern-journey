@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Error from './pages/error';
+import Logout from './pages/Logout';
 
 const App = () => {
   return <>  
@@ -21,6 +22,7 @@ const App = () => {
     <Route path="/signup" element={<SignUp />} />
     <Route path="/login" element={<Login />} />
     <Route path='*'element={<Error />} />
+    <Route path="/logout" element={<Logout />} />
     
   </Routes>
   <Footer />

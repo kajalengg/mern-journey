@@ -28,26 +28,26 @@ I continuously improve my skills by implementing real-world features, solving pr
 
 ## Frontend
 
-⚛️ React.js
+* ⚛️ React.js
 
-⚡ Vite
+* ⚡ Vite
 
-🎨 CSS3
+* 🎨 CSS3
 
-🔀 React Router DOM
+* 🔀 React Router DOM
 
 
 ## Backend
 
-*🟢 Node.js
+* 🟢 Node.js
 
-*🚂 Express.js
+* 🚂 Express.js
 
-*🍃 MongoDB
+* 🍃 MongoDB
 
-*🔐 JWT Authentication
+* 🔐 JWT Authentication
 
-*✅ Zod Validation
+* ✅ Zod Validation
 
 
 ## Tools
@@ -78,19 +78,19 @@ I continuously improve my skills by implementing real-world features, solving pr
 
 ## ✨ Features Implemented
 
-*🔐 User Authentication
+* 🔐 User Authentication
 
-*📝 Registration & Login APIs
+* 📝 Registration & Login APIs
 
-*✅ Input Validation using Zod
+* ✅ Input Validation using Zod
 
-*🔑 JWT-based Authentication
+* 🔑 JWT-based Authentication
 
-*📬 Contact API
+* 📬 Contact API
 
-*⚠️ Error Handling Middleware
+* ⚠️ Error Handling Middleware
 
-*🌐 RESTful APIs
+* 🌐 RESTful APIs
 
 
 
@@ -191,7 +191,7 @@ Linkedin: https://www.linkedin.com/in/kajal-yadav-4314b9362
 
 ## Author
 
-kajal 
+kajal Yadav
 
 
 
