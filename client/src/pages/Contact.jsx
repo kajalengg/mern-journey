@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useAuth } from "../store/auth";
+import { Navigate } from "react-router-dom";
 
 
 const Contact = () => {
@@ -8,6 +10,21 @@ const Contact = () => {
   email: "",
   massage: ""
 });
+
+const [userdata,setuserdata]=useState(true);
+
+const {usser}=useAuth();
+
+if(userdata && usser){
+  setUser({
+    name:usser.name,
+    email:usser.email,
+    massage:"",
+
+
+  });
+  setuserdata(false);
+}
 
 const handleInputs = (e) => {
   console.log(e);

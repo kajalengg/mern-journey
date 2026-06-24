@@ -1,12 +1,20 @@
+import { useAuth } from "../store/auth";
+
+
 const About = () => {
+
+  const {usser}=useAuth();
+
   return <>
 
   <main>
+    
 
     <section className="section-hero">
       <div className="container grid grid-two-column">  
         <div className="hero-content">
-          <p>Welcome to My Application!</p>
+          <p>Hey {usser?.name}</p>
+
           <h1>Why Choose Us?</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure illum facilis
