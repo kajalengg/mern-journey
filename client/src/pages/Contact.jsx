@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import { useAuth } from "../store/auth";
 import { Navigate } from "react-router-dom";
 
@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 const Contact = () => {
 
   const [user, setUser] = useState({
+
   name: "",
   email: "",
   massage: ""
@@ -34,10 +35,39 @@ const handleInputs = (e) => {
   setUser({...user, [name]: value,});
 };
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log(user);
+
+  try {
+    const response = await fetch(
+      "http://localhost:3000/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
+
+    if (response.ok) {
+      const res_data = await response.json();
+
+      console.log("res from server", res_data);
+
+      setUser({
+        name: "",
+        email: "",
+        massage: "",
+      });
+    }
+  } catch (error) {
+    console.log("contact error:", error);
+  }
 };
+
+  console.log(user);
+
 
 
 
@@ -89,7 +119,7 @@ const handleSubmit = (e) => {
               </div>
 
               
-              <label htmlFor="massage">Message</label>
+              <label htmlFor="massage">Massage</label>
               <div>
                 <textarea
                   name="massage"

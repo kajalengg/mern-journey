@@ -9,7 +9,7 @@ const contactSchema = new Schema({
     type: String,
     required: true
   },
-  message: {
+  massage: {
     type: String,
     required: true
   }
