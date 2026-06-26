@@ -10,6 +10,8 @@ export const AuthProvider = ({ children }) => {
 
   const [usser,setUser]=useState("");
 
+  const [servi,setservi] = useState([]);
+
   const storetokenInLS = (serverToken) => {
     return localStorage.setItem("token", serverToken);
   };
@@ -39,6 +41,7 @@ export const AuthProvider = ({ children }) => {
           const data = await response.json();
           console.log("userdata",data.userData);
           setUser(data.userData);
+          
         }
 
     }catch(error){
@@ -47,16 +50,33 @@ export const AuthProvider = ({ children }) => {
 
     }
 
-  };
+  };//services data fetching
+  const getServices= async () => {
 
+    try {
+        const response = await fetch("http://localhost:3000/data/service",
+          {
+            method:"GET",
+          }
+        );
+        if (response.ok){
+          const data = await response.json();
+          console.log(data.msg);
+          setservi(data.msg);
+        }
+    }catch(error){
+      console.log("services frontent error: ${error}");
+    }
+  };
   //jwt authentication to get the user data
 
   useEffect(() => {
+    getServices();
     userAuthentication();
   },[]);
 
   return (
-    <AuthContext.Provider value={{ isloggedIn,storetokenInLS,LogoutUser,usser}}>
+    <AuthContext.Provider value={{ isloggedIn,storetokenInLS,LogoutUser,usser, servi}}>
       {children}
     </AuthContext.Provider>
   );

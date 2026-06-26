@@ -102,17 +102,19 @@ button {
 }
 /*state rules*/
 button:hover {
-    box-shadow: inset 0 0 0 0.2rem var(--background-color);
+    box-shadow: inset 0 0 0 0.2rem var(#cccccc4f);
 
 }
 
 a:hover {
+
     a.active {
             color: #535bf2;
     }
     button {
 
-        background-color: #f9f9f9;
+        background-color: #f9f9f90c;
+        border: #007bff;
 
     }
     
@@ -467,6 +469,50 @@ textarea {
         }
     }
 }
+.Dcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border: 2px #c110b8;
+}
+.card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.3s ease;
+}
 
+.card:hover {
+  border-color: #007bff;
+  transform: translateY(-5px);
+}
 
+.card-details {
+  padding: 1.5rem;
+}
 
+.card-details .grid {
+  margin-bottom: 1rem;
+}
+
+.card-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-details 
+
+p {
+  color: #d3c6c6;
+  line-height: 1.6;
+}
+#pc1 {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+#pc2 {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
