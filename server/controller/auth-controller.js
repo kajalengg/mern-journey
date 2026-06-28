@@ -10,7 +10,7 @@ const home = async (req, res) => {
   }
 };
 
-const lo = async (req, res) => {
+const lo = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const userExists = await User.findOne({ email });
@@ -39,7 +39,7 @@ const lo = async (req, res) => {
   }
 };
 
-const re = async (req, res) => {
+const re = async (req, res ,next) => {
   try {
     console.log(req.body);
     const {name, email, password, phone } = req.body;

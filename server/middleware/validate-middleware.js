@@ -1,23 +1,20 @@
+const { ZodError } = require("zod");
+
 const validate = (schema) => async (req, res, next) => {
-try {
-    const parsedBody = await schema.parseAsync(req.body);
-    req.body = parsedBody;
+  try {
+    req.body = await schema.parseAsync(req.body);
     next();
-} catch (er) {
-    const status = 422;
-    const message = "Failed to validate";
-    const extraDetail = er.issues && er.issues[0] ? er.issues[0].message : er.message;
-    const error = {
-        status,
-        message,
-        extraDetail,
-    };
+  } catch (err) {
+    if (err instanceof ZodError) {
+      return next({
+        status: 422,
+        message: "Validation Failed",
+        extraDetail: err.issues[0].message,
+      });
+    }
 
-    console.log(error);
-
-    next(error);
-    
-}
+    next(err);
+  }
 };
 
 module.exports = validate;

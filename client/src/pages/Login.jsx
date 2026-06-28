@@ -41,11 +41,18 @@ const handleInputs = (e) => {
       console.log(response.status);
       storetokenInLS(res_data.token);
 
+
+
     if(response.ok){
       alert("login successfull")
       setUser({email:"",password:""});
       navigate("/");
-    }
+    }else {
+  console.log("Else block is running");
+  console.log(res_data);
+
+  alert(res_data.extraDetail ? res_data.extraDetail : res_data.message);
+}
 
 
     console.log(response.status);
