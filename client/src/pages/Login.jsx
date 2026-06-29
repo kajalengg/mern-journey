@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../store/auth';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -44,14 +45,14 @@ const handleInputs = (e) => {
 
 
     if(response.ok){
-      alert("login successfull")
+      toast.success("login successfull")
       setUser({email:"",password:""});
       navigate("/");
     }else {
   console.log("Else block is running");
   console.log(res_data);
 
-  alert(res_data.extraDetail ? res_data.extraDetail : res_data.message);
+  toast.error(res_data.extraDetail ? res_data.extraDetail : res_data.message);
 }
 
 

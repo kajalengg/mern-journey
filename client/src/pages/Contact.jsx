@@ -1,6 +1,7 @@
 import { useEffect,useState } from "react";
 import { useAuth } from "../store/auth";
 import { Navigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 const Contact = () => {
@@ -52,6 +53,7 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
       const res_data = await response.json();
+      toast.success("Submit successfully")
 
       console.log("res from server", res_data);
 
