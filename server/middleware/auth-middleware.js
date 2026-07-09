@@ -1,44 +1,40 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/user-model");
 
-const authMiddleware = async(req, res, next) => {
-
+const authMiddleware = async (req, res, next) => {
     const token = req.header("Authorization");
 
     if (!token) {
         return res.status(401).json({
-            message: "Unauthorized HTTP, Token if not provided",
+            message: "Unauthorized. Token not provided.",
         });
     }
 
     const jwtToken = token.replace("Bearer ", "").trim();
 
-    console.log("token from auth middleware:", jwtToken);
+    try {
+        const isVerified = jwt.verify(jwtToken, process.env.JWT_SECRET);
 
-    try{
-        
-        const isVerified = jwt.verify(jwtToken,process.env.JWT_SECRET);
-        const userData = await User.findOne({email:isVerified.email}).
-        select({
-            password:0,
-        });
+        const userData = await User.findOne({
+            email: isVerified.email,
+        }).select("-password");
 
-        console.log(userData);
+        if (!userData) {
+            return res.status(401).json({
+                message: "User not found.",
+            });
+        }
 
-        req.user=userData;
-        req.token=token;
-        req.userID=userData._id;
+        req.user = userData;
+        req.token = jwtToken;
+        req.userID = userData._id;
 
-        
         next();
-
-    }catch(error){
-
-        return res.status(401).json({ message: "Unauthorized. Invalid or expired token." });
-
+    } catch (error) {
+        return res.status(401).json({
+            message: "Unauthorized. Invalid or expired token.",
+        });
     }
-
-    
 };
 
 module.exports = authMiddleware;

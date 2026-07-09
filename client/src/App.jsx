@@ -11,7 +11,7 @@ import Error from './pages/error';
 import Logout from './pages/Logout';
 
 const App = () => {
-  return <>  
+  return <>
   
   <Navbar />
   <Routes>

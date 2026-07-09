@@ -6,6 +6,7 @@ const cors = require("cors")
 const authRouter = require('./router/auth-router');
 const contactRouter = require('./router/contact-router');
 const serviceRouter = require('./router/service-router');
+const adminRouter = require('./router/admin-router')
 const connectDB = require('./utils/db');
 const errorMiddleware = require('./middleware/error-middleware');
 
@@ -29,6 +30,7 @@ app.use(express.json());// Middleware to parse JSON bodies
 app.use("/auth", authRouter);
 app.use("/api", contactRouter);
 app.use("/data", serviceRouter);
+app.use("/admin", adminRouter);
 
 
 app.use(errorMiddleware);
