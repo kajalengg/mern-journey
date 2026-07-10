@@ -9,14 +9,14 @@
 }
 
 header {
-    background-color: var(--btn-color);
+    
     padding: 0;
     width: 100%;
     box-sizing: border-box;
 }
 
 .logo a {
-    color: #f4f3ff;;
+    color: var(btn-color);
     font-size: 2.2rem;
     font-weight: 700;
     text-decoration: none;
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li a {
-    color: #fff;
+    color: var(btn-color);
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
@@ -44,7 +44,7 @@ ul li a {
 
 ul li a:hover,
 ul li a.active {
-    color:  #d10e9d;
+    color: #fff
 }
 
 /* Tablet and Mobile - up to 768px */
