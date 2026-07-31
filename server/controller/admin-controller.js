@@ -50,16 +50,33 @@ const con = async (req,res)=>{
     
 }
 
-const deleteUserById = async (req,res) => {
-        try{
+const deleteUserById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
 
-            const id=req.params.id;
-            await User.deleteOne({_id:id});
-            return res.status(200).json({massage:"User deleted successfully"});
+    await User.deleteOne({ _id: id });
 
-        }catch(error){
-            next(error)
-        }
-    };
+    return res.status(200).json({
+      message: "User deleted successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
-module.exports = {userr,ser,con,deleteUserById,}
+const getUserById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+
+    const data = await User.findOne(
+      { _id: id },
+      { password: 0 }
+    );
+
+    return res.status(200).json(data);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {userr,ser,con,deleteUserById,getUserById,}
