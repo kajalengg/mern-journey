@@ -23,6 +23,30 @@ const Users = () => {
     }
   };
 
+  const deleteUser = async (id) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/admin/users/delete/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: authorizationToken,
+        },
+      }
+    );
+
+    const data = await response.json();
+
+    console.log("User After DELETE:", data);
+
+    if (response.ok) {
+      getAllUsersData();
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
   useEffect(() => {
     getAllUsersData();
   }, []);
@@ -51,8 +75,8 @@ const Users = () => {
                         <td>{curUser.email}</td>
                         <td>{curUser.phone}</td>
                         <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
+                        <td><button onClick={() => deleteUser(curUser._id)}>Delete</button></td>
+                      </tr>
                     })}
                 </tbody>
             </table>

@@ -47,5 +47,19 @@ const con = async (req,res)=>{
     }catch(error){
         next(error);
     }
+    
 }
-module.exports = {userr,ser,con,};
+
+const deleteUserById = async (req,res) => {
+        try{
+
+            const id=req.params.id;
+            await User.deleteOne({_id:id});
+            return res.status(200).json({massage:"User deleted successfully"});
+
+        }catch(error){
+            next(error)
+        }
+    };
+
+module.exports = {userr,ser,con,deleteUserById,}
