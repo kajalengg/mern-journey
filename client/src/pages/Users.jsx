@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Users = () => {
   const { authorizationToken } = useAuth();
@@ -42,6 +43,7 @@ const Users = () => {
 
     if (response.ok) {
       getAllUsersData();
+      toast.success("User Deleted Successfully");
     }
   } catch (error) {
     console.log(error);

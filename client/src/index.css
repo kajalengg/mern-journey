@@ -516,3 +516,79 @@ p {
   line-height: 1.6;
   font-size: 0.9rem;
 }
+
+.admin-user-section {
+  padding: 5rem 0;
+}
+
+.admin-user-section .container:first-child {
+  margin-bottom: 3rem;
+}
+
+.admin-user-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.admin-user {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-user table {
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-user thead {
+  background: #ffffff;
+}
+
+.admin-user th {
+  padding: 25px;
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.admin-user td {
+  padding: 22px;
+  text-align: center;
+  color: #444;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-user tbody tr:hover {
+  background: #f7f7f7;
+}
+
+.admin-user a {
+  color: #5d5fef;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-user a:hover {
+  text-decoration: underline;
+}
+
+.admin-user button {
+  padding: 10px 22px;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-user button:hover {
+  background: #4b52d3;
+}

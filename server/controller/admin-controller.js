@@ -83,19 +83,47 @@ const getUserById = async (req, res, next) => {
 const updateUserById = async (req, res) => {
   try {
     const id = req.params.id;
+    const { name, email, phone } = req.body;
 
-    const updatedUserData = req.body;
+    // Check if another user already has this email
+    const existingUser = await User.findOne({ email });
 
-    const updatedData = await User.updateOne(
-      { _id: id },
-      { $set: updatedUserData }
+    if (existingUser && existingUser._id.toString() !== id) {
+      return res.status(400).json({
+        message: "Email already exists.",
+      });
+    }
+
+    await User.findByIdAndUpdate(
+      id,
+      { name, email, phone },
+      { new: true }
     );
 
-    return res.status(200).json(updatedData);
+    return res.status(200).json({
+      message: "User updated successfully.",
+    });
   } catch (error) {
     console.log(error);
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+};
+
+const deleteContactById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+
+    await Contact.deleteOne({ _id: id });
+
+    return res.status(200).json({
+      message: "Contact deleted successfully",
+    });
+  } catch (error) {
+    next(error);
   }
 };
 
 
-module.exports = {userr,ser,con,deleteUserById,getUserById,updateUserById,}
+module.exports = {userr,ser,con,deleteUserById,getUserById,updateUserById,deleteContactById,}

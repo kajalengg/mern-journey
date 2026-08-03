@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
+
 
 const AdminUpdate = () => {
   const { id } = useParams();
@@ -68,8 +70,10 @@ const AdminUpdate = () => {
       console.log(data);
 
       if (response.ok) {
-        alert("User Updated Successfully");
+        toast.success("User Updated Successfully");
         navigate("/admin/users");
+      }else{
+        toast.error("Not User Updated Successfully");
       }
     } catch (error) {
       console.log(error);
@@ -89,7 +93,7 @@ const AdminUpdate = () => {
     
             <div className="contactus-form>">
             <h1>Update User Data</h1>
-            
+
               <form onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name">Username</label>
