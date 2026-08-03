@@ -125,5 +125,40 @@ const deleteContactById = async (req, res, next) => {
   }
 };
 
+const deleteServiceById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
 
-module.exports = {userr,ser,con,deleteUserById,getUserById,updateUserById,deleteContactById,}
+    await Service.deleteOne({ _id: id });
+
+    return res.status(200).json({
+      message: "Service deleted successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const addService = async (req, res) => {
+  try {
+    const { service, price, description } = req.body;
+
+    const newService = await Service.create({
+      service,
+      price,
+      description,
+    });
+
+    return res.status(201).json({
+      message: "Service added successfully",
+      newService,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+};
+
+
+module.exports = {userr,ser,con,deleteUserById,getUserById,updateUserById,deleteContactById,deleteServiceById,addService,}

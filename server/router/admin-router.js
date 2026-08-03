@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { userr, ser, con,deleteUserById,getUserById,updateUserById,deleteContactById} = require("../controller/admin-controller");
+const { userr, ser, con,deleteUserById,getUserById,updateUserById,deleteContactById,deleteServiceById,addService} = require("../controller/admin-controller");
 
 const authMiddleware = require("../middleware/auth-middleware");
 const adminMiddleware = require("../middleware/admin-middleware");
@@ -19,6 +19,14 @@ router
 .patch(authMiddleware, adminMiddleware, updateUserById);
 
 router.get("/services", authMiddleware, adminMiddleware, ser);
+
+router
+  .route("/services/delete/:id")
+  .delete(authMiddleware, adminMiddleware, deleteServiceById);
+router
+  .route("/services/add")
+  .post(authMiddleware, adminMiddleware, addService);
+
 router.get("/contacts", authMiddleware, adminMiddleware, con);
 router
 .route("/contacts/delete/:id")
