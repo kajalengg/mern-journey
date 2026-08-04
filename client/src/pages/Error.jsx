@@ -7,6 +7,7 @@ const Error = () => {
         <section id="error-page">
 
             <div className="error-content">
+                <h1 className="error-code">404</h1>
                 <h2>Sorry! Page not found</h2>
                 <p>
                     Oops! it seems like the page you're trying to access doesn't exist.

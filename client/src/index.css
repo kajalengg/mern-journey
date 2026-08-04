@@ -592,3 +592,135 @@ p {
 .admin-user button:hover {
   background: #4b52d3;
 }
+
+.admin-contact-section {
+  padding: 5rem 0;
+}
+
+.admin-contact-section h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background: #1f2937;
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid #374151;
+}
+
+.contact-card p {
+  margin-bottom: 1rem;
+}
+
+.contact-card .btn {
+  margin-top: 1rem;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   Error Page
+========================= */
+
+#error-page {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.error-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.error-content h2 {
+  font-size: 5rem;
+  color: #646cff;
+  margin-bottom: 2rem;
+}
+
+.error-content p {
+  font-size: 1.8rem;
+  color: #b8b8b8;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btns a {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: 0.3s ease;
+}
+
+.btns a:first-child {
+  background: #646cff;
+  color: #fff;
+}
+
+.btns a:first-child:hover {
+  background: #4d56d8;
+  transform: translateY(-3px);
+}
+
+.btns a:last-child {
+  border: 2px solid #646cff;
+  color: #646cff;
+}
+
+.btns a:last-child:hover {
+  background: #646cff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .error-content h2 {
+    font-size: 3.8rem;
+  }
+
+  .error-content p {
+    font-size: 1.6rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btns a {
+    width: 220px;
+    text-align: center;
+  }
+}
+.error-code {
+  font-size: 12rem;
+  font-weight: 800;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
