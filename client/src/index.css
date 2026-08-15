@@ -13,11 +13,13 @@
     --helper-color: #99b9ff;
 }
 
+/* =========================
+   Base
+========================= */
+
 html {
     font-size: 62.5%;
 }
-
-/* Base style */
 
 body {
     margin: 0;
@@ -27,7 +29,7 @@ body {
 h1 {
     font-size: 5.4rem;
     line-height: 1.1;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 p,
@@ -39,7 +41,6 @@ textarea {
     line-height: 1.56;
     letter-spacing: 0.1rem;
     word-spacing: 0.06rem;
-    list-style: none;
 }
 
 li {
@@ -50,11 +51,24 @@ a {
     font-weight: 500;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
-    color: var(--btn-color);
+    color: #cccccc4f;
     text-decoration: inherit;
 }
 
+a:hover {
+    color: #535bf2;
+}
+
+a.active {
+    color: #535bf2;
+}
+
+/* =========================
+   Common Containers
+========================= */
+
 .container {
+    width: 100%;
     max-width: 140rem;
     margin: 0 auto;
     padding: 5rem 2.4rem;
@@ -69,135 +83,147 @@ a {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* =========================
+   Buttons
+========================= */
+
 button {
     text-transform: capitalize;
     padding: 1rem 2.2rem;
     font-size: 1.7rem;
     font-weight: 500;
-    background-color: var(--btn-color);
-    color: #fff;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
+    background-color: #cccccc4f;
+    color: #ffffff;
     border: 0.1rem solid transparent;
+    border-radius: 0.8rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
-    transition: border-color 0.3s;
-    -webkit-transition: border-color 0.3s;
-    -moz-transition: border-color 0.3s;
-    -o-transition: border-color 0.3s;
-    -ms-transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
-
-.btn-2 {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 0.2rem var(--btn-color);
-    margin-left: 3.2rem;
-}
-
-/* State rules */
 
 button:hover {
     box-shadow: inset 0 0 0 0.2rem #cccccc4f;
 }
 
-a:hover {
-    color: #535bf2;
+.btn-2 {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0.2rem #cccccc4f;
+    margin-left: 3.2rem;
 }
 
-a.active {
-    color: #535bf2;
+.btn-2:hover {
+    box-shadow: inset 0 0 0 0.2rem #cccccc4f;
 }
 
 button {
     background-color: #f9f9f90c;
-    border: 1px solid #007bff;
+    border: 0.1rem solid #007bff;
 }
 
-/* Hero section */
+/* =========================
+   Logo
+========================= */
+
+.logo a {
+    color: #cccccc4f;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* =========================
+   Hero Section
+========================= */
 
 .section-hero {
-    &.grid {
-        align-items: center;
-    }
-
-    .hero-content {
-        & p {
-            margin: 2.4rem 0 5.8rem 0;
-
-            &:first-child {
-                margin: 0 0 1.2rem 0;
-            }
-        }
-    }
-
-    .hero-image {
-        display: flex;
-        justify-content: center;
-
-        & img {
-            max-width: 75%;
-            height: auto;
-            object-fit: contain;
-        }
-    }
+    display: grid;
+    align-items: center;
 }
+
+.section-hero.grid {
+    align-items: center;
+}
+
+.hero-content p {
+    margin: 2.4rem 0 5.8rem 0;
+}
+
+.hero-content p:first-child {
+    margin: 0 0 1.2rem 0;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 75%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   Another Section
+========================= */
 
 .another-section {
     margin: 8.6rem 0;
-
-    & .container {
-        background-color: var(--background-color);
-        border-radius: 1rem;
-    }
-
-    & .grid {
-        color: var(--dark-color);
-
-        & .div1 {
-            text-align: center;
-            border-right: 0.2rem solid var(--dark-color);
-            margin-right: 3.4rem;
-
-            &:last-child {
-                border-right: none;
-                text-align: center;
-            }
-
-            & h2 {
-                font-size: 4.8rem;
-            }
-
-            & p {
-                text-transform: capitalize;
-            }
-        }
-    }
 }
+
+.another-section .container {
+    background-color: var(--background-color);
+    border-radius: 1rem;
+}
+
+.another-section .grid {
+    color: var(--dark-color);
+}
+
+.another-section .div1 {
+    text-align: center;
+    border-right: 0.2rem solid var(--dark-color);
+    margin-right: 3.4rem;
+}
+
+.another-section .div1:last-child {
+    border-right: none;
+    text-align: center;
+}
+
+.another-section .div1 h2 {
+    font-size: 4.8rem;
+}
+
+.another-section .div1 p {
+    text-transform: capitalize;
+}
+
+/* =========================
+   Parent Container
+========================= */
 
 .parentcontainerc {
     padding: 0;
-
-    & h1 {
-        margin-bottom: 3.2rem;
-    }
 }
 
-.container {
-    padding-top: 3.2rem;
+.parentcontainerc h1 {
+    margin-bottom: 3.2rem;
 }
 
-& .contact-image {
+/* =========================
+   Contact Section
+========================= */
+
+.contact-image {
     align-items: center;
+}
 
-    & img {
-        width: 65%;
-        height: auto;
-        object-fit: contain;
-        max-width: 100%;
-    }
+.contact-image img {
+    width: 65%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 form {
@@ -206,16 +232,20 @@ form {
     gap: 2.5rem;
 }
 
-& label {
+form label {
     display: block;
     margin-bottom: 1.2rem;
 }
 
-& input,
-textarea {
+form input,
+form textarea {
     width: 80%;
     padding: 0.2rem 0.6rem;
 }
+
+/* =========================
+   Error Page
+========================= */
 
 #error-page .content {
     max-width: 70rem;
@@ -226,18 +256,20 @@ textarea {
     font-size: 18vw;
     line-height: 1rem;
     animation: animate 10s ease-in-out infinite;
-    background: -webkit-repeating-linear-gradient(
+    background: repeating-linear-gradient(
         #71b7e6,
-        var(--btn-color),
+        #cccccc4f,
         #d188ee,
         #338eac,
         #a53978,
-        var(--btn-color),
+        #cccccc4f,
         #8f31b5
     );
     background-size: 500%;
     background-position: 0 0;
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 2px rgba(238, 104, 104, 0.5);
     position: relative;
@@ -265,214 +297,19 @@ textarea {
     }
 }
 
-/* Mobile Responsive - 320px to 768px - Same layout as desktop */
-
-@media (max-width: 768px) {
-    html {
-        font-size: 48%;
-    }
-
-    h1 {
-        font-size: 4.4rem;
-        line-height: 1.1;
-    }
-
-    p,
-    li,
-    label,
-    input,
-    textarea {
-        font-size: 1.6rem;
-        line-height: 1.5;
-    }
-
-    a {
-        font-size: 1.6rem;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 3rem 1.5rem;
-    }
-
-    /* Keep same layout - grid-two-column stays 2 columns */
-
-    .grid-two-column {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4rem;
-    }
-
-    button {
-        padding: 0.8rem 1.6rem;
-        font-size: 1.5rem;
-    }
-
-    .btn-2 {
-        margin-left: 2.4rem;
-    }
-
-    .section-hero {
-        &.grid {
-            align-items: center;
-        }
-
-        .hero-content {
-            & p {
-                margin: 2.4rem 0 5.8rem 0;
-
-                &:first-child {
-                    margin: 0 0 1.2rem 0;
-                }
-            }
-        }
-
-        .hero-image {
-            & img {
-                max-width: 85%;
-                height: auto;
-                object-fit: contain;
-            }
-        }
-    }
-
-    .another-section {
-        margin: 8.6rem 0;
-
-        & .grid {
-            grid-template-columns: repeat(2, 1fr);
-            color: var(--dark-color);
-            gap: 4rem;
-
-            & .div1 {
-                text-align: center;
-                border-right: 0.2rem solid var(--dark-color);
-                margin-right: 2rem;
-
-                &:last-child {
-                    border-right: none;
-                    text-align: center;
-                }
-
-                & h2 {
-                    font-size: 3.8rem;
-                }
-
-                & p {
-                    text-transform: capitalize;
-                }
-            }
-        }
-    }
-
-    .parentcontainerc {
-        padding: 0;
-
-        & h1 {
-            margin-bottom: 3.2rem;
-        }
-    }
-
-    & .contact-image {
-        align-items: center;
-
-        & img {
-            width: 70%;
-            height: auto;
-            object-fit: contain;
-            max-width: 100%;
-        }
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    & label {
-        display: block;
-        margin-bottom: 1.2rem;
-    }
-
-    & input,
-    textarea {
-        width: 100%;
-        padding: 0.6rem 0.8rem;
-    }
-
-    #error-page .content {
-        max-width: 70rem;
-        text-align: center;
-    }
-
-    .content h2.header {
-        font-size: 12vw;
-        line-height: 1rem;
-    }
-}
-
-/* Small Mobile - 320px to 480px */
-
-@media (max-width: 480px) {
-    html {
-        font-size: 42%;
-    }
-
-    .container {
-        padding: 2.5rem 1rem;
-    }
-
-    button {
-        padding: 0.7rem 1.4rem;
-        font-size: 1.3rem;
-    }
-
-    .btn-2 {
-        margin-left: 1.8rem;
-    }
-
-    .section-hero {
-        .hero-image {
-            & img {
-                max-width: 95%;
-                height: auto;
-            }
-        }
-    }
-
-    & .contact-image {
-        & img {
-            width: 85%;
-            height: auto;
-        }
-    }
-
-    .another-section {
-        & .grid {
-            gap: 2.5rem;
-
-            & .div1 {
-                margin-right: 1rem;
-
-                & h2 {
-                    font-size: 3rem;
-                }
-            }
-        }
-    }
-}
-
-/* Service cards */
+/* =========================
+   Service Cards
+========================= */
 
 .Dcontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    border: 2px solid #c110b8;
+    border: 0.2rem solid #c110b8;
 }
 
 .card {
-    border: 2px solid #ccc;
+    border: 0.2rem solid #ccc;
     border-radius: 10px;
     padding: 1rem;
     transition: 0.3s ease;
@@ -513,7 +350,9 @@ textarea {
     font-size: 0.9rem;
 }
 
-/* Admin users */
+/* =========================
+   Admin Users
+========================= */
 
 .admin-user-section {
     padding: 5rem 0;
@@ -537,7 +376,7 @@ textarea {
     width: 100%;
     max-width: 1100px;
     border-collapse: collapse;
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -549,18 +388,18 @@ textarea {
 
 .admin-user th {
     padding: 25px;
-    color: #222;
+    color: #222222;
     font-size: 1.6rem;
     font-weight: 600;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #dddddd;
 }
 
 .admin-user td {
     padding: 22px;
     text-align: center;
-    color: #444;
+    color: #444444;
     font-size: 1.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .admin-user tbody tr:hover {
@@ -580,7 +419,7 @@ textarea {
 .admin-user button {
     padding: 10px 22px;
     background: #646cff;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -591,7 +430,9 @@ textarea {
     background: #4b52d3;
 }
 
-/* Admin contacts */
+/* =========================
+   Admin Contacts
+========================= */
 
 .admin-contact-section {
     padding: 5rem 0;
@@ -630,7 +471,7 @@ textarea {
 }
 
 /* =========================
-   Error Page
+   Error Content
 ========================= */
 
 #error-page {
@@ -659,6 +500,17 @@ textarea {
     margin-bottom: 3rem;
 }
 
+.error-code {
+    font-size: 12rem;
+    font-weight: 800;
+    color: #646cff;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Error Buttons
+========================= */
+
 .btns {
     display: flex;
     justify-content: center;
@@ -676,11 +528,12 @@ textarea {
 
 .btns a:first-child {
     background: #646cff;
-    color: #fff;
+    color: #ffffff;
 }
 
 .btns a:first-child:hover {
     background: #4d56d8;
+    color: #ffffff;
     transform: translateY(-3px);
 }
 
@@ -691,15 +544,166 @@ textarea {
 
 .btns a:last-child:hover {
     background: #646cff;
-    color: #fff;
+    color: #ffffff;
     transform: translateY(-3px);
 }
 
 /* =========================
-   Responsive
+   Responsive Tablet
 ========================= */
 
 @media (max-width: 768px) {
+    html {
+        font-size: 48%;
+    }
+
+    h1 {
+        font-size: 4.4rem;
+        line-height: 1.1;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    textarea {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+    .grid-two-column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-2 {
+        margin-left: 2.4rem;
+    }
+
+    .section-hero {
+        align-items: center;
+    }
+
+    .hero-content p {
+        margin: 2.4rem 0 5.8rem 0;
+    }
+
+    .hero-content p:first-child {
+        margin: 0 0 1.2rem 0;
+    }
+
+    .hero-image img {
+        max-width: 85%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .another-section {
+        margin: 8.6rem 0;
+    }
+
+    .another-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+        color: var(--dark-color);
+        gap: 4rem;
+    }
+
+    .another-section .div1 {
+        text-align: center;
+        border-right: 0.2rem solid var(--dark-color);
+        margin-right: 2rem;
+    }
+
+    .another-section .div1:last-child {
+        border-right: none;
+        text-align: center;
+    }
+
+    .another-section .div1 h2 {
+        font-size: 3.8rem;
+    }
+
+    .another-section .div1 p {
+        text-transform: capitalize;
+    }
+
+    .parentcontainerc {
+        padding: 0;
+    }
+
+    .parentcontainerc h1 {
+        margin-bottom: 3.2rem;
+    }
+
+    .contact-image {
+        align-items: center;
+    }
+
+    .contact-image img {
+        width: 70%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 1.2rem;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    #error-page .content {
+        max-width: 70rem;
+        text-align: center;
+    }
+
+    .content h2.header {
+        font-size: 12vw;
+        line-height: 1rem;
+    }
+
+    .Dcontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-user {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .admin-user table {
+        min-width: 700px;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
     .error-content h2 {
         font-size: 3.8rem;
     }
@@ -719,9 +723,79 @@ textarea {
     }
 }
 
-.error-code {
-    font-size: 12rem;
-    font-weight: 800;
-    color: #646cff;
-    margin-bottom: 1rem;
+/* =========================
+   Responsive Mobile
+========================= */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 42%;
+    }
+
+    .container {
+        padding: 2.5rem 1rem;
+    }
+
+    button {
+        padding: 0.7rem 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .btn-2 {
+        margin-left: 1.8rem;
+    }
+
+    .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        max-width: 95%;
+        height: auto;
+    }
+
+    .contact-image img {
+        width: 85%;
+        height: auto;
+    }
+
+    .another-section {
+        margin: 5rem 0;
+    }
+
+    .another-section .grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .another-section .div1 {
+        border-right: none;
+        border-bottom: 0.2rem solid var(--dark-color);
+        margin-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    .another-section .div1:last-child {
+        border-bottom: none;
+    }
+
+    .another-section .div1 h2 {
+        font-size: 3rem;
+    }
+
+    .Dcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-user table {
+        min-width: 650px;
+    }
 }

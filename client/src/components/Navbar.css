@@ -1,4 +1,4 @@
-.container{
+.container {
     max-width: 140rem;
     padding: 4.2rem 2.4rem;
     display: flex;
@@ -9,14 +9,13 @@
 }
 
 header {
-    
     padding: 0;
     width: 100%;
     box-sizing: border-box;
 }
 
 .logo a {
-    color: var(btn-color);
+    color: #cccccc4f;
     font-size: 2.2rem;
     font-weight: 700;
     text-decoration: none;
@@ -34,7 +33,7 @@ ul li {
 }
 
 ul li a {
-    color: var(btn-color);
+    color: #cccccc4f;
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
@@ -44,7 +43,7 @@ ul li a {
 
 ul li a:hover,
 ul li a.active {
-    color: #fff
+    color: #fff;
 }
 
 /* Tablet and Mobile - up to 768px */
