@@ -2,32 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Urbanist, system-ui, Avenir,Arial, Helvetica, sans-serif,;
+    font-family: Urbanist, system-ui, Avenir, Arial, Helvetica, sans-serif;
     color-scheme: light dark;
 }
+
 :root {
     --background-color: #f4f3ff;
     --btn-color: #646cff;
     --dark-color: #242424;
     --helper-color: #99b9ff;
-
-
 }
 
 html {
     font-size: 62.5%;
 }
 
-/*base style*/
+/* Base style */
 
 body {
     margin: 0;
-   /* min-width: 32rem;*/
     min-height: 100vh;
 }
 
 h1 {
-
     font-size: 5.4rem;
     line-height: 1.1;
     font-weight: bold;
@@ -55,7 +52,6 @@ a {
     letter-spacing: 0.1rem;
     color: var(--btn-color);
     text-decoration: inherit;
-
 }
 
 .container {
@@ -95,41 +91,42 @@ button {
     -ms-transition: border-color 0.3s;
 }
 
-.btn-2{
+.btn-2 {
     background-color: transparent;
     box-shadow: inset 0 0 0 0.2rem var(--btn-color);
     margin-left: 3.2rem;
 }
-/*state rules*/
-button:hover {
-    box-shadow: inset 0 0 0 0.2rem var(#cccccc4f);
 
+/* State rules */
+
+button:hover {
+    box-shadow: inset 0 0 0 0.2rem #cccccc4f;
 }
 
 a:hover {
-
-    a.active {
-            color: #535bf2;
-    }
-    button {
-
-        background-color: #f9f9f90c;
-        border: #007bff;
-
-    }
-    
-    
+    color: #535bf2;
 }
 
+a.active {
+    color: #535bf2;
+}
+
+button {
+    background-color: #f9f9f90c;
+    border: 1px solid #007bff;
+}
+
+/* Hero section */
 
 .section-hero {
-    &.grid{
+    &.grid {
         align-items: center;
     }
 
     .hero-content {
-        & p{
+        & p {
             margin: 2.4rem 0 5.8rem 0;
+
             &:first-child {
                 margin: 0 0 1.2rem 0;
             }
@@ -139,6 +136,7 @@ a:hover {
     .hero-image {
         display: flex;
         justify-content: center;
+
         & img {
             max-width: 75%;
             height: auto;
@@ -148,7 +146,6 @@ a:hover {
 }
 
 .another-section {
-
     margin: 8.6rem 0;
 
     & .container {
@@ -156,14 +153,13 @@ a:hover {
         border-radius: 1rem;
     }
 
-    & .grid{
+    & .grid {
         color: var(--dark-color);
 
-        & .div1{
+        & .div1 {
             text-align: center;
             border-right: 0.2rem solid var(--dark-color);
             margin-right: 3.4rem;
-
 
             &:last-child {
                 border-right: none;
@@ -171,8 +167,7 @@ a:hover {
             }
 
             & h2 {
-                font-size:4.8rem;
-                
+                font-size: 4.8rem;
             }
 
             & p {
@@ -183,59 +178,50 @@ a:hover {
 }
 
 .parentcontainerc {
-
-    padding: 0%;
+    padding: 0;
 
     & h1 {
         margin-bottom: 3.2rem;
     }
-
 }
 
 .container {
     padding-top: 3.2rem;
-
 }
 
 & .contact-image {
-
     align-items: center;
-    
-    & img {
 
+    & img {
         width: 65%;
         height: auto;
         object-fit: contain;
         max-width: 100%;
     }
-    
 }
 
 form {
-
     display: flex;
     flex-direction: column;
-    gap:2.5rem;
+    gap: 2.5rem;
 }
-& label {
 
+& label {
     display: block;
     margin-bottom: 1.2rem;
-
-
 }
 
 & input,
 textarea {
-
-        width: 80;
-        padding: 0.2rem 0.6rem;
-
+    width: 80%;
+    padding: 0.2rem 0.6rem;
 }
+
 #error-page .content {
     max-width: 70rem;
     text-align: center;
 }
+
 .content h2.header {
     font-size: 18vw;
     line-height: 1rem;
@@ -255,29 +241,32 @@ textarea {
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 2px rgba(238, 104, 104, 0.5);
     position: relative;
-
 }
 
 @keyframes animate {
-
-    0%{
+    0% {
         background-position: 0 0;
     }
+
     25% {
         background-position: 100% 0;
     }
-    50%{
+
+    50% {
         background-position: 100% 100%;
     }
-    75%{
+
+    75% {
         background-position: 0 100%;
     }
-    100%{
+
+    100% {
         background-position: 0 0;
     }
 }
 
 /* Mobile Responsive - 320px to 768px - Same layout as desktop */
+
 @media (max-width: 768px) {
     html {
         font-size: 48%;
@@ -307,6 +296,7 @@ textarea {
     }
 
     /* Keep same layout - grid-two-column stays 2 columns */
+
     .grid-two-column {
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
@@ -329,6 +319,7 @@ textarea {
         .hero-content {
             & p {
                 margin: 2.4rem 0 5.8rem 0;
+
                 &:first-child {
                     margin: 0 0 1.2rem 0;
                 }
@@ -374,7 +365,7 @@ textarea {
     }
 
     .parentcontainerc {
-        padding: 0%;
+        padding: 0;
 
         & h1 {
             margin-bottom: 3.2rem;
@@ -421,6 +412,7 @@ textarea {
 }
 
 /* Small Mobile - 320px to 480px */
+
 @media (max-width: 480px) {
     html {
         font-size: 42%;
@@ -469,164 +461,172 @@ textarea {
         }
     }
 }
+
+/* Service cards */
+
 .Dcontainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  border: 2px #c110b8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border: 2px solid #c110b8;
 }
+
 .card {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  transition: 0.3s ease;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-  border-color: #007bff;
-  transform: translateY(-5px);
+    border-color: #007bff;
+    transform: translateY(-5px);
 }
 
 .card-details {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .card-details .grid {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card-details h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
-.card-details 
-
-p {
-  color: #d3c6c6;
-  line-height: 1.6;
+.card-details p {
+    color: #d3c6c6;
+    line-height: 1.6;
 }
+
 #pc1 {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
+
 #pc2 {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
+
+/* Admin users */
 
 .admin-user-section {
-  padding: 5rem 0;
+    padding: 5rem 0;
 }
 
 .admin-user-section .container:first-child {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .admin-user-section h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
 .admin-user {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .admin-user table {
-  width: 100%;
-  max-width: 1100px;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1100px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .admin-user thead {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 .admin-user th {
-  padding: 25px;
-  color: #222;
-  font-size: 1.6rem;
-  font-weight: 600;
-  border-bottom: 2px solid #ddd;
+    padding: 25px;
+    color: #222;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
 }
 
 .admin-user td {
-  padding: 22px;
-  text-align: center;
-  color: #444;
-  font-size: 1.5rem;
-  border-bottom: 1px solid #eee;
+    padding: 22px;
+    text-align: center;
+    color: #444;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
 }
 
 .admin-user tbody tr:hover {
-  background: #f7f7f7;
+    background: #f7f7f7;
 }
 
 .admin-user a {
-  color: #5d5fef;
-  font-weight: 600;
-  text-decoration: none;
+    color: #5d5fef;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .admin-user a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .admin-user button {
-  padding: 10px 22px;
-  background: #646cff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 10px 22px;
+    background: #646cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .admin-user button:hover {
-  background: #4b52d3;
+    background: #4b52d3;
 }
 
+/* Admin contacts */
+
 .admin-contact-section {
-  padding: 5rem 0;
+    padding: 5rem 0;
 }
 
 .admin-contact-section h1 {
-  text-align: center;
-  margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
 .contact-card {
-  background: #1f2937;
-  border-radius: 10px;
-  padding: 2rem;
-  border: 1px solid #374151;
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #374151;
 }
 
 .contact-card p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contact-card .btn {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .contact-heading {
-  text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 /* =========================
@@ -634,65 +634,65 @@ p {
 ========================= */
 
 #error-page {
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .error-content {
-  max-width: 700px;
-  text-align: center;
+    max-width: 700px;
+    text-align: center;
 }
 
 .error-content h2 {
-  font-size: 5rem;
-  color: #646cff;
-  margin-bottom: 2rem;
+    font-size: 5rem;
+    color: #646cff;
+    margin-bottom: 2rem;
 }
 
 .error-content p {
-  font-size: 1.8rem;
-  color: #b8b8b8;
-  line-height: 1.8;
-  margin-bottom: 3rem;
+    font-size: 1.8rem;
+    color: #b8b8b8;
+    line-height: 1.8;
+    margin-bottom: 3rem;
 }
 
 .btns {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .btns a {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.6rem;
-  transition: 0.3s ease;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
 }
 
 .btns a:first-child {
-  background: #646cff;
-  color: #fff;
+    background: #646cff;
+    color: #fff;
 }
 
 .btns a:first-child:hover {
-  background: #4d56d8;
-  transform: translateY(-3px);
+    background: #4d56d8;
+    transform: translateY(-3px);
 }
 
 .btns a:last-child {
-  border: 2px solid #646cff;
-  color: #646cff;
+    border: 2px solid #646cff;
+    color: #646cff;
 }
 
 .btns a:last-child:hover {
-  background: #646cff;
-  color: #fff;
-  transform: translateY(-3px);
+    background: #646cff;
+    color: #fff;
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -700,27 +700,28 @@ p {
 ========================= */
 
 @media (max-width: 768px) {
-  .error-content h2 {
-    font-size: 3.8rem;
-  }
+    .error-content h2 {
+        font-size: 3.8rem;
+    }
 
-  .error-content p {
-    font-size: 1.6rem;
-  }
+    .error-content p {
+        font-size: 1.6rem;
+    }
 
-  .btns {
-    flex-direction: column;
-    align-items: center;
-  }
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .btns a {
-    width: 220px;
-    text-align: center;
-  }
+    .btns a {
+        width: 220px;
+        text-align: center;
+    }
 }
+
 .error-code {
-  font-size: 12rem;
-  font-weight: 800;
-  color: #646cff;
-  margin-bottom: 1rem;
+    font-size: 12rem;
+    font-weight: 800;
+    color: #646cff;
+    margin-bottom: 1rem;
 }
