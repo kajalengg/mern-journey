@@ -58,7 +58,7 @@ const Users = () => {
     <>
     <section className="admin-user-section">
         <div className="container">
-            <h1>Admin Users Data</h1>
+            <h1>Users Data</h1>
         </div>
         <div className="container admin-user">
             <table>

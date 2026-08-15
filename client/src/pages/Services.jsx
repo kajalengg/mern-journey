@@ -58,7 +58,7 @@ const getAllServices = async () => {
   return (
     <section className="admin-user-section">
       <div className="container">
-        <h1>Admin Services Data</h1>
+        <h1>Services Data</h1>
 
         <Link to="/admin/services/add">
         <button className="btn">Add Service</button>

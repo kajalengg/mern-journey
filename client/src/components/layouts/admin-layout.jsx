@@ -1,6 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { useAuth } from "../../store/auth";
 
 const AdminLayout = () => {
+
+  const {user}= useAuth();
+  console.log("Admin",user);
   return (
     <>
       <header>
