@@ -7,7 +7,7 @@ import Services from "./pages/Service";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
-import Error from "./pages/error";
+import Error from "./pages/Error";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
