@@ -27,7 +27,7 @@ const handleInputs = (e) => {
 
   try {
     const response = await fetch(
-      "http://localhost:3000/auth/login",
+      "https://mern-journey-k0p8.onrender.com/auth/login",
       {
         method: "POST",
         headers: {

@@ -9,7 +9,7 @@ const AdminContacts = () => {
   const getAllContacts = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/admin/contacts",
+        "https://mern-journey-k0p8.onrender.com/admin/contacts",
         {
           method: "GET",
           headers: {
@@ -36,7 +36,7 @@ const AdminContacts = () => {
   const deleteContact = async (id) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/admin/contacts/delete/${id}`,
+      `https://mern-journey-k0p8.onrender.com/admin/contacts/delete/${id}`,
       {
         method: "DELETE",
         headers: {

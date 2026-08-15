@@ -29,7 +29,7 @@ const AdminAddService = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/admin/services/add",
+        "https://mern-journey-k0p8.onrender.com/admin/services/add",
         {
           method: "POST",
           headers: {

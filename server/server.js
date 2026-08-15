@@ -18,17 +18,20 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 const app = express();
 
 // CORS configuration
-const corsOption = {
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:5174",
-  ],
-  methods: "GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS",
-  credentials: true,
-};
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: "GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS",
+    credentials: true,
+  })
+);
 
 // Middleware
-app.use(cors(corsOption));
 app.use(express.json());
 
 // Routes
@@ -43,8 +46,10 @@ app.use(errorMiddleware);
 // Connect Database and Start Server
 connectDB()
   .then(() => {
-    app.listen(3000, () => {
-      console.log("Server is running on port 3000");
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {

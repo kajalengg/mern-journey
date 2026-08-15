@@ -9,7 +9,7 @@ const [services, setServices] = useState([]);
 const getAllServices = async () => {
     try {
     const response = await fetch(
-        "http://localhost:3000/admin/services",
+        "https://mern-journey-k0p8.onrender.com/admin/services",
         {
         method: "GET",
         headers: {
@@ -31,7 +31,7 @@ const getAllServices = async () => {
   const deleteService = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/admin/services/delete/${id}`,
+        `https://mern-journey-k0p8.onrender.com/admin/services/delete/${id}`,
         {
           method: "DELETE",
           headers: {

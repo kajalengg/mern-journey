@@ -10,7 +10,7 @@ const Users = () => {
 
   const getAllUsersData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/admin/users", {
+      const response = await fetch("https://mern-journey-k0p8.onrender.com/admin/users", {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -28,7 +28,7 @@ const Users = () => {
   const deleteUser = async (id) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/admin/users/delete/${id}`,
+      `https://mern-journey-k0p8.onrender.com/admin/users/delete/${id}`,
       {
         method: "DELETE",
         headers: {

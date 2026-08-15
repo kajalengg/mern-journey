@@ -29,7 +29,7 @@ const SignUp = () => {
     
     try{
 
-      const response = await fetch("http://localhost:3000/auth/register", {
+      const response = await fetch("https://mern-journey-k0p8.onrender.com/auth/register", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",

@@ -29,7 +29,7 @@ const AdminUpdate = () => {
   const getSingleUserData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/admin/users/${id}`,
+        `https://mern-journey-k0p8.onrender.com/admin/users/${id}`,
         {
           method: "GET",
           headers: {
@@ -55,7 +55,7 @@ const AdminUpdate = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/admin/users/update/${id}`,
+        `https://mern-journey-k0p8.onrender.com/admin/users/update/${id}`,
         {
           method: "PATCH",
           headers: {

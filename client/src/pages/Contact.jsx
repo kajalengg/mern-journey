@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await fetch(
-      "http://localhost:3000/api/contact",
+      "https://mern-journey-k0p8.onrender.com/api/contact",
       {
         method: "POST",
         headers: {

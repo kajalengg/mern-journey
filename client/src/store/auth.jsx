@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   const userAuthentication = async(req, res) => {
 
     try{
-        const response = await fetch("http://localhost:3000/auth/user",{
+        const response = await fetch("https://mern-journey-k0p8.onrender.com/auth/user",{
           method: "GET",
           headers: {
           Authorization: authorizationToken,
@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
   const getServices= async () => {
 
     try {
-        const response = await fetch("http://localhost:3000/data/service",
+        const response = await fetch("https://mern-journey-k0p8.onrender.com/data/service",
           {
             method:"GET",
           }
