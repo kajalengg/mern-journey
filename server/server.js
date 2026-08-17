@@ -21,12 +21,31 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://mern-journey-3hl4.vercel.app",
 ];
 
 app.use(
   cors({
-    origin: allowedOrigins,
-    methods: "GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS",
+    origin: function (origin, callback) {
+      // Allow requests without an Origin header
+      // (Postman, curl, server-to-server requests, etc.)
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      // Allow localhost
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      // Allow all Vercel deployments and preview URLs
+      if (origin.endsWith(".vercel.app")) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
     credentials: true,
   })
 );
